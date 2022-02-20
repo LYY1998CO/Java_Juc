@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 class Ticket{
     //使用lock来实现买票的操作
     private int number=30;
-    private final ReentrantLock lock=new ReentrantLock();
+    private final ReentrantLock lock=new ReentrantLock(true);
     public void sale(){
         //上锁
         lock.lock();
