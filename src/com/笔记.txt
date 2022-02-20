@@ -35,3 +35,28 @@ synchronized实现同步的基础:Java中的每一个对象都可以作为锁
 synchronized(隐式)和lock(显式)都是可重入锁
 Exception in thread "main" java.lang.StackOverflowError(栈溢出异常)
 可重入锁又是递归锁
+死锁:
+两个或者两个以上的进程在执行过程中，因为争夺资源而造成一种互相等待的现象，
+没有外力干涉，他们无法在执行下去。
+产生原因:
+系统资源不足
+资源分配不当
+进程运行推进顺序不合适
+验证是否是死锁:(命令)
+(1)jps:类似linux ps-ef
+(2)jstack jvm自带堆栈跟踪工具
+创建线程:
+(1)继承thread类
+(2)实现runnable接口
+(3)callable接口
+(4)线程池方式
+callable和runnable的区别：
+(1)是否有返回值
+(2)是否抛出异常
+(3)实现方法不同，一个是call(),一个是run()
+
+futureTask
+辅助类:
+CyclicBarrier
+CountDownLatch
+Semaphore
