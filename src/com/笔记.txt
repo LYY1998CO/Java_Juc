@@ -31,3 +31,7 @@ synchronized实现同步的基础:Java中的每一个对象都可以作为锁
 公平锁：
 阳光普照
 效率相对低
+可重入锁:
+synchronized(隐式)和lock(显式)都是可重入锁
+Exception in thread "main" java.lang.StackOverflowError(栈溢出异常)
+可重入锁又是递归锁
